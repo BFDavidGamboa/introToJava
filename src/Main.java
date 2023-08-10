@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        CalcularEstacionPorAño();
+        BreakYContinue();
 
     }
 
@@ -475,4 +475,45 @@ public class Main {
 
             System.out.println(numeroTexto);
         }
-    }
+
+        public static void RepetitiveCicles() {
+            for (int i = 0; i < 10; i++) {
+                System.out.println("i: " + i);
+
+            }
+
+            var contador = 0;
+            while (contador <= 3) {
+                System.out.println("while contador = " + contador);
+                contador++;
+            }
+
+            contador = 0;
+            do {
+                System.out.println("do contador = " + contador);
+                contador ++;
+            } while (contador < 3);
+
+        }
+
+        public static void BreakYContinue(){
+
+            iniciobreak:
+            for (int i = 0; i < 3; i++) {
+                if (i % 2 ==0) {
+                    System.out.println("i = "+ i);
+                    break iniciobreak;
+                }
+            }
+
+            iniciocontinue:
+            for (int i = 0; i < 3; i++) {
+                if (i % 2 != 0) {
+                    continue iniciocontinue;
+                }
+
+                System.out.println("i = " + i);
+            }
+        }
+
+     }
